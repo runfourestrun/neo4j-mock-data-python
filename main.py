@@ -3,7 +3,6 @@ from neo4jclient.TransactionFunctions import write_Schedule
 import os
 from random import choices
 
-from graphdatascience import GraphDataScience
 
 
 
@@ -46,9 +45,7 @@ if __name__ == '__main__':
 
     neo4j.write(tx_func=write_Schedule,parameters=params)
 
-    gds = GraphDataScience()
-    g, _ = gds.graph.project.cypher()
-    test = gds.nodeSimilarity.write
+
 
 
 
